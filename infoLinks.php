@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+echo "<link rel='stylesheet' href='./CssLinks/infoLinks.css'>";
+
 require 'vendor/autoload.php';
 use Embed\Embed;
 
@@ -21,16 +23,16 @@ if(isset($_SESSION['links']) && !empty($_SESSION['links'])) {
         
         echo "<div class='links'>";
         echo "<br>";
-        echo 'Título do site: '. $title;
+        echo '<b> Título do site: </b>'. $title;
         echo "<br>";
-        echo 'Descrição do site: '. $description;
+        echo '<b>Descrição do site: </b>'. $description;
         echo "<br>";
-        echo 'Linguagem do site: '. $language;
+        echo '<b>Linguagem do site: </b>'. $language;
         echo "<br>";
-        echo "Imagem do site: <br> <img src='$image' alt='imagem da logo do(a) $title' width='100px'>";
+        echo "<b>Imagem do site: </b><br> <img src='$image' alt='imagem da logo do(a) $title' width='100px'>";
         echo "<br>";
         if(isset($info->authorName)){
-            echo 'Nome do autor: '. $autor;
+            echo '<b>Nome do autor: </b>'. $autor;
         }
         echo "<br>";
         echo "</div>";
